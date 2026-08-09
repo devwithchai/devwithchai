@@ -100,55 +100,6 @@ Exploring how simulation, robot models and real-world data can come together to 
 
 ---
 
-## Selected Work
-
-<table>
-<tr>
-<td width="33%" valign="top">
-
-### OpenKinematics
-
-Kinematics, dynamics and visualization in Python.
-
-→ [Repository](https://github.com/devwithchai/OpenKinematics)
-
-</td>
-<td width="33%" valign="top">
-
-### Soft Robotics
-
-Tendon-driven actuation, mechanism design and dynamic modelling.
-
-→ In progress
-
-</td>
-<td width="33%" valign="top">
-
-### Mobile Robotics
-
-Differential-drive systems, embedded control and ROS 2.
-
-→ In progress
-
-</td>
-</tr>
-</table>
-
----
-
-## From the Workbench
-
-```text
-08 / 2026   → experimenting with tendon-driven soft robotics
-07 / 2026   → building and documenting OpenKinematics
-06 / 2026   → going deeper into ROS 2 and robot simulation
-05 / 2026   → exploring robotics algorithms and system design
-```
-
-This section changes as the work changes.
-
----
-
 ## Tools & Languages
 
 **Languages**
