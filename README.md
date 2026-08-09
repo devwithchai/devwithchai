@@ -1,15 +1,17 @@
 # Chaitanya Belekar
 
 <p align="center">
-  <img src="./assets/hero.gif" alt="Animated robotics visualization" width="100%">
-</p>
-
-<p align="center">
-  <a href="https://github.com/devwithchai"><img src="./assets/github-button.svg" alt="GitHub"></a>
+  <a href="https://github.com/devwithchai">
+    <img src="./assets/github-button.svg" alt="GitHub">
+  </a>
   &nbsp;
-  <a href="https://www.linkedin.com/in/chaitanya-belekar/"><img src="./assets/linkedin-button.svg" alt="LinkedIn"></a>
+  <a href="https://www.linkedin.com/in/chaitanya-belekar/">
+    <img src="./assets/linkedin-button.svg" alt="LinkedIn">
+  </a>
   &nbsp;
-  <a href="mailto:chaitanyabelekar18@gmail.com"><img src="./assets/email-button.svg" alt="Email"></a>
+  <a href="https://mail.google.com/mail/?view=cm&fs=1&to=chaitanyabelekar18@gmail.com">
+    <img src="./assets/email-button.svg" alt="Email">
+  </a>
 </p>
 
 ---
