@@ -1,12 +1,29 @@
+# Chaitanya Belekar
+
 <p align="center">
-  <img src="./assets/hero.gif" alt="Chaitanya Belekar — Robotics & Automation" width="100%">
+  <img src="./assets/hero.gif" alt="Animated robotics visualization" width="100%">
 </p>
 
 <p align="center">
-  <a href="https://github.com/devwithchai">GitHub</a>
-  &nbsp;·&nbsp;
-  <a href="https://www.linkedin.com/in/chaitanya-belekar/">LinkedIn</a>
+  <a href="https://github.com/devwithchai"><img src="./assets/github-button.svg" alt="GitHub"></a>
+  &nbsp;
+  <a href="https://www.linkedin.com/in/chaitanya-belekar/"><img src="./assets/linkedin-button.svg" alt="LinkedIn"></a>
+  &nbsp;
+  <a href="mailto:chaitanyabelekar2003@gmail.com"><img src="./assets/email-button.svg" alt="Email"></a>
 </p>
+
+---
+
+## How I Build
+
+I usually understand things better after trying to build them.
+
+A derivation becomes clearer when it drives a simulation.  
+A simulation becomes more interesting when it meets hardware.
+
+That's the loop I keep coming back to:
+
+**understand → build → break → improve → document**
 
 ---
 
@@ -20,36 +37,60 @@
 
 ## Currently Building
 
-| Project | Status |
-|---|---|
-| **[OpenKinematics](https://github.com/devwithchai/OpenKinematics)** | 🔵 Building |
-| **Tendon-Driven Soft Robotic Finger** | 🟢 Exploring |
-| **Mobile Robotics with ROS 2** | 🟠 Building |
-| **Digital Twin for Robotic Systems** | 🟣 Planning |
+<table>
+<tr>
+<td width="50%" valign="top">
 
 ### OpenKinematics
 
 A Python library for **robot kinematics, dynamics and visualization**, implemented from first principles.
 
-The project started as a way to understand robot mathematics more deeply rather than simply relying on existing tools.
+Built mainly as a way to understand the mathematics behind robotics more deeply.
+
+**Python · Robotics · Open Source**
 
 → [View repository](https://github.com/devwithchai/OpenKinematics)
+
+</td>
+<td width="50%" valign="top">
 
 ### Tendon-Driven Soft Robotic Finger
 
 Exploring tendon-driven actuation, soft robotic mechanisms and dynamic simulation.
 
-The goal is to understand the complete chain:
+The current chain is:
 
 `mechanism → actuation → modelling → simulation → control`
+
+**Soft Robotics · CAD · Simulation**
+
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
 
 ### Mobile Robotics
 
 Working with differential-drive robots, embedded controllers, sensors and ROS 2.
 
-The direction is moving from basic physical prototypes toward:
+Moving from physical prototypes toward:
 
-`embedded systems → odometry → sensor fusion → ROS 2 → autonomy`
+`odometry → sensor fusion → ROS 2 → autonomy`
+
+**ROS 2 · Embedded · Gazebo**
+
+</td>
+<td width="50%" valign="top">
+
+### Digital Twins
+
+Exploring how simulation, robot models and real-world data can come together to represent robotic systems.
+
+**Simulation · Robotics · Digital Twins**
+
+</td>
+</tr>
+</table>
 
 ---
 
@@ -61,50 +102,27 @@ The direction is moving from basic physical prototypes toward:
 
 ### OpenKinematics
 
-Python-based robotics library for:
-
-- Kinematics
-- Dynamics
-- Visualization
-- Mathematical modelling
-
-**Python · Robotics**
+Kinematics, dynamics and visualization in Python.
 
 → [Repository](https://github.com/devwithchai/OpenKinematics)
 
 </td>
-
 <td width="33%" valign="top">
 
 ### Soft Robotics
 
-Tendon-driven soft robotic finger exploring:
+Tendon-driven actuation, mechanism design and dynamic modelling.
 
-- Actuation
-- Mechanism design
-- Dynamic simulation
-- Soft robotics
-
-**CAD · Simulation · Robotics**
-
-→ Project in progress
+→ In progress
 
 </td>
-
 <td width="33%" valign="top">
 
 ### Mobile Robotics
 
-ROS 2 based mobile robotics work involving:
+Differential-drive systems, embedded control and ROS 2.
 
-- Differential drive
-- Sensors
-- Embedded control
-- Robot simulation
-
-**ROS 2 · Embedded · Gazebo**
-
-→ Project in progress
+→ In progress
 
 </td>
 </tr>
@@ -117,13 +135,11 @@ ROS 2 based mobile robotics work involving:
 ```text
 08 / 2026   → experimenting with tendon-driven soft robotics
 07 / 2026   → building and documenting OpenKinematics
-06 / 2026   → working deeper with ROS 2 and robot simulation
+06 / 2026   → going deeper into ROS 2 and robot simulation
 05 / 2026   → exploring robotics algorithms and system design
 ```
 
-This section will probably change often.
-
-That's the point.
+This section changes as the work changes.
 
 ---
 
@@ -147,7 +163,7 @@ That's the point.
 
 ---
 
-## What I'm Interested In
+## What I'm Exploring
 
 ```text
 Robotics Software
@@ -169,7 +185,7 @@ meet each other.
 
 ---
 
-## A small note
+## A Small Note
 
 Not everything here is finished.
 
