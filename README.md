@@ -9,7 +9,7 @@
   &nbsp;
   <a href="https://www.linkedin.com/in/chaitanya-belekar/"><img src="./assets/linkedin-button.svg" alt="LinkedIn"></a>
   &nbsp;
-  <a href="mailto:chaitanyabelekar2003@gmail.com"><img src="./assets/email-button.svg" alt="Email"></a>
+  <a href="mailto:chaitanyabelekar18@gmail.com"><img src="./assets/email-button.svg" alt="Email"></a>
 </p>
 
 ---
