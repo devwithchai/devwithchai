@@ -156,6 +156,10 @@ I prefer documenting the process rather than waiting until everything looks perf
 
 ---
 
+[![GitHub Streak](https://streak-stats.demolab.com?user=devwithchai&theme=ads-juicy-fresh)](https://git.io/streak-stats)
+
+---
+
 <p align="center">
 
 `< Keep building. Keep learning. Share everything. />`
