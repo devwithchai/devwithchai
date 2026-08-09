@@ -1,5 +1,3 @@
-# Chaitanya Belekar
-
 <p align="center">
   <img src="./assets/hero.gif" alt="Chaitanya Belekar — Robotics & Automation" width="100%">
 </p>
@@ -9,16 +7,6 @@
   &nbsp;·&nbsp;
   <a href="https://www.linkedin.com/in/chaitanya-belekar/">LinkedIn</a>
 </p>
-
----
-
-## About
-
-I'm a final-year **Robotics & Automation Engineering** student at KKWIEER, Nashik.
-
-I like understanding systems by building them — starting from the mathematics and algorithms, moving through simulation, and eventually getting things onto real hardware.
-
-Right now, I'm particularly interested in **robotics software, ROS 2, digital twins, computer vision, embedded systems and soft robotics.**
 
 ---
 
