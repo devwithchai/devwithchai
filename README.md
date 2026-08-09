@@ -1,6 +1,10 @@
 # Chaitanya Belekar
 
 <p align="center">
+  <img src="./assets/hero.gif" alt="Animated robotics visualization" width="100%">
+</p>
+
+<p align="center">
   <a href="https://github.com/devwithchai">
     <img src="./assets/github-button.svg" alt="GitHub">
   </a>
