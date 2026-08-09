@@ -60,21 +60,6 @@ Built mainly as a way to understand the mathematics behind robotics more deeply.
 </td>
 <td width="50%" valign="top">
 
-### Tendon-Driven Soft Robotic Finger
-
-Exploring tendon-driven actuation, soft robotic mechanisms and dynamic simulation.
-
-The current chain is:
-
-`mechanism → actuation → modelling → simulation → control`
-
-**Soft Robotics · CAD · Simulation**
-
-</td>
-</tr>
-<tr>
-<td width="50%" valign="top">
-
 ### Mobile Robotics
 
 Working with differential-drive robots, embedded controllers, sensors and ROS 2.
@@ -84,6 +69,23 @@ Moving from physical prototypes toward:
 `odometry → sensor fusion → ROS 2 → autonomy`
 
 **ROS 2 · Embedded · Gazebo**
+
+→ [View repository](https://github.com/devwithchai/MobileRobotics)
+
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
+
+### Tendon-Driven Soft Robotic Finger
+
+Exploring tendon-driven actuation, soft robotic mechanisms and dynamic simulation.
+
+The current chain is:
+
+`mechanism → actuation → modelling → simulation → control`
+
+**Soft Robotics · CAD · Simulation**
 
 </td>
 <td width="50%" valign="top">
