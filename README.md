@@ -124,17 +124,9 @@ Exploring how simulation, robot models and real-world data can come together to 
 
 ## What I'm Exploring
 
-```text
-Robotics Software
-       │
-       ├── Robot Kinematics & Dynamics
-       ├── ROS 2
-       ├── Computer Vision
-       ├── Reinforcement Learning
-       ├── Digital Twins
-       ├── Embedded Robotics
-       └── Human–Robot Interaction
-```
+<p align="center">
+  <img src="./assets/robotics-system-map.svg" alt="Intelligent robotic systems map" width="100%">
+</p>
 
 I'm especially interested in the space where
 
@@ -153,10 +145,6 @@ Some are experiments.
 Some are ideas I'm still trying to figure out.
 
 I prefer documenting the process rather than waiting until everything looks perfect.
-
----
-
-[![GitHub Streak](https://streak-stats.demolab.com?user=devwithchai&theme=ads-juicy-fresh)](https://git.io/streak-stats)
 
 ---
 
