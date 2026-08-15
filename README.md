@@ -1,7 +1,7 @@
 # Chaitanya Belekar
 
 <p align="center">
-  <img src="./assets/hero.gif" alt="Animated robotics visualization" width="100%">
+  <img src="./assets/hero.gif">
 </p>
 
 <p align="center">
