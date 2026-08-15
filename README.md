@@ -45,8 +45,6 @@ A Python library for **robot kinematics, dynamics and visualization**, implement
 
 Built mainly as a way to understand the mathematics behind robotics more deeply.
 
-**Python · Robotics · Open Source**
-
 → [View repository](https://github.com/devwithchai/OpenKinematics)
 
 </td>
@@ -59,8 +57,6 @@ Working with differential-drive robots, embedded controllers, sensors and ROS 2.
 Moving from physical prototypes toward:
 
 `odometry → sensor fusion → ROS 2 → autonomy`
-
-**ROS 2 · Embedded · Gazebo**
 
 → [View repository](https://github.com/devwithchai/MobileRobotics)
 
@@ -77,16 +73,12 @@ The current chain is:
 
 `mechanism → actuation → modelling → simulation → control`
 
-**Soft Robotics · CAD · Simulation**
-
 </td>
 <td width="50%" valign="top">
 
 ### Digital Twins
 
 Exploring how simulation, robot models and real-world data can come together to represent robotic systems.
-
-**Simulation · Robotics · Digital Twins**
 
 </td>
 </tr>
@@ -100,11 +92,11 @@ Instead of a wall of badges, here's how the tools fit into the way I work:
 
 | Layer | Tools I use | What they help me do |
 |:--|:--|:--|
-| **Code** | `Python` · `C` · `C++` · `MATLAB` | algorithms, modelling, control |
-| **Robot OS** | `ROS 2` · `Linux` · `Git` | connect and develop robotic systems |
-| **Simulation** | `Gazebo` · `RViz` · `MoveIt` | test robots before hardware |
-| **Hardware** | `Arduino` · `ESP32` · sensors · actuators | turn models into physical systems |
-| **Design** | `Fusion 360` · CAD | mechanisms and robot structures |
+| **Code** | <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python" height="25"/> <img src="https://img.shields.io/badge/C-A8B9CC?style=for-the-badge&logo=c&logoColor=white" alt="C" height="25"/> <img src="https://img.shields.io/badge/C++-00599C?style=for-the-badge&logo=c%2B%2B&logoColor=white" alt="C++" height="25"/> <img src="https://img.shields.io/badge/MATLAB-0076A8?style=for-the-badge&logo=mathworks&logoColor=white" alt="MATLAB" height="25"/> | algorithms, modelling, control |
+| **Robot OS** | <img src="https://img.shields.io/badge/ROS 2-22314E?style=for-the-badge&logo=ros&logoColor=white" alt="ROS 2" height="25"/> <img src="https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black" alt="Linux" height="25"/> <img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white" alt="Git" height="25"/> | connect and develop robotic systems |
+| **Simulation** | <img src="https://img.shields.io/badge/Gazebo-1E738A?style=for-the-badge&logo=gazebo&logoColor=white" alt="Gazebo" height="25"/> <img src="https://img.shields.io/badge/RViz-5A2E61?style=for-the-badge&logo=ros&logoColor=white" alt="RViz" height="25"/> <img src="https://img.shields.io/badge/MoveIt-5A2E61?style=for-the-badge&logo=ros&logoColor=white" alt="MoveIt" height="25"/> | test robots before hardware |
+| **Hardware** | <img src="https://img.shields.io/badge/Arduino-00979D?style=for-the-badge&logo=arduino&logoColor=white" alt="Arduino" height="25"/> <img src="https://img.shields.io/badge/ESP32-E7342C?style=for-the-badge&logo=espressif&logoColor=white" alt="ESP32" height="25"/> <img src="https://img.shields.io/badge/Sensors-6E7D8C?style=for-the-badge" alt="Sensors" height="25"/> <img src="https://img.shields.io/badge/Actuators-6E7D8C?style=for-the-badge" alt="Actuators" height="25"/> | turn models into physical systems |
+| **Design** | <img src="https://img.shields.io/badge/Fusion 360-1A8EBB?style=for-the-badge&logo=autodesk&logoColor=white" alt="Fusion 360" height="25"/> <img src="https://img.shields.io/badge/CAD-6E7D8C?style=for-the-badge" alt="CAD" height="25"/> | mechanisms and robot structures |
 
 <details>
 <summary><b>Current technical focus</b></summary>
@@ -122,26 +114,68 @@ Instead of a wall of badges, here's how the tools fit into the way I work:
 I don't think of these as separate technologies. I'm interested in how they form one robotic system:
 
 ```mermaid
-graph LR
-    A[Perception] --> B[State & World Model]
-    B --> C[Algorithms]
-    C --> D[Planning & Control]
-    D --> E[Simulation]
-    E --> F[Robot Hardware]
-    F --> A
+graph TD
+    subgraph "Sense"
+        A[Perception]
+        A_CV[(Computer Vision)]
+        A_LIDAR[(LIDAR, IMU)]
+        A --> A_CV
+        A --> A_LIDAR
+    end
 
-    B --- G[Computer Vision]
-    C --- H[Kinematics & Dynamics]
-    D --- I[ROS 2]
-    E --- J[Digital Twins]
-    F --- K[Embedded Systems]
+    subgraph "Think"
+        B[State & World Model]
+        C[Algorithms]
+        D[Planning & Control]
+        B --> C
+        C --> D
+        C_KD[("Kinematics & Dynamics")] -.-> C
+        C_SLAM[("SLAM, Navigation")] -.-> C
+    end
 
-    style A fill:#eff6ff,stroke:#2563eb,stroke-width:2px,color:#111827
-    style B fill:#ecfdf5,stroke:#10b981,stroke-width:2px,color:#111827
-    style C fill:#ecfdf5,stroke:#10b981,stroke-width:2px,color:#111827
-    style D fill:#fff7ed,stroke:#f97316,stroke-width:2px,color:#111827
-    style E fill:#fff7ed,stroke:#f97316,stroke-width:2px,color:#111827
-    style F fill:#f5f3ff,stroke:#7c3aed,stroke-width:2px,color:#111827
+    subgraph "Act"
+        E[Simulation]
+        F[Robot Hardware]
+        E_DT[(Digital Twins)] -.-> E
+        F_ES[(Embedded Systems)] -.-> F
+    end
+
+    subgraph "Orchestration"
+        ROS2[("ROS 2")]
+    end
+
+    A --> B
+    D --> E
+    E -- "Sim-to-Real" --> F
+    F -- "Feedback Loop" --> A
+
+    D -- "ROS 2 Msg" --> ROS2
+    ROS2 -- "ROS 2 Msg" --> F
+
+    %% Main process nodes
+    style A fill:#264653,stroke:#2A9D8F,stroke-width:2px,color:#fff
+    style B fill:#264653,stroke:#2A9D8F,stroke-width:2px,color:#fff
+    style C fill:#264653,stroke:#2A9D8F,stroke-width:2px,color:#fff
+    style D fill:#264653,stroke:#2A9D8F,stroke-width:2px,color:#fff
+    style E fill:#264653,stroke:#E9C46A,stroke-width:2px,color:#fff
+    style F fill:#264653,stroke:#F4A261,stroke-width:2px,color:#fff
+    style ROS2 fill:#264653,stroke:#E76F51,stroke-width:2px,color:#fff
+
+    %% Sub-item nodes
+    style A_CV fill:#2A9D8F,color:#fff
+    style A_LIDAR fill:#2A9D8F,color:#fff
+    style C_KD fill:#2A9D8F,color:#fff
+    style C_SLAM fill:#2A9D8F,color:#fff
+    style E_DT fill:#E9C46A,color:#000
+    style F_ES fill:#F4A261,color:#000
+
+    %% Clickable links
+    click C_KD "https://github.com/devwithchai/OpenKinematics" "View OpenKinematics repository" _blank
+    click C_SLAM "https://github.com/devwithchai/MobileRobotics" "View Mobile Robotics repository" _blank
+    click F_ES "https://github.com/devwithchai/MobileRobotics" "View Mobile Robotics repository" _blank
+    click ROS2 "https://docs.ros.org/en/rolling/" "Go to ROS 2 Documentation" _blank
+
+    classDef default fill:#264653,stroke:#ddd,color:#fff
 ```
 
 The interesting part for me is the loop:
