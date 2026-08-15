@@ -33,14 +33,6 @@ That's the loop I keep coming back to:
 
 ---
 
-## My Robotics Stack
-
-<p align="center">
-  <img src="./assets/robotics-stack.svg" alt="My Robotics Stack" width="100%">
-</p>
-
----
-
 ## Currently Building
 
 <table>
@@ -102,37 +94,61 @@ Exploring how simulation, robot models and real-world data can come together to 
 
 ---
 
-## Tools & Languages
+## Toolbox
 
-**Languages**
+Instead of a wall of badges, here's how the tools fit into the way I work:
 
-`Python` `C` `C++` `MATLAB`
+| Layer | Tools I use | What they help me do |
+|:--|:--|:--|
+| **Code** | `Python` · `C` · `C++` · `MATLAB` | algorithms, modelling, control |
+| **Robot OS** | `ROS 2` · `Linux` · `Git` | connect and develop robotic systems |
+| **Simulation** | `Gazebo` · `RViz` · `MoveIt` | test robots before hardware |
+| **Hardware** | `Arduino` · `ESP32` · sensors · actuators | turn models into physical systems |
+| **Design** | `Fusion 360` · CAD | mechanisms and robot structures |
 
-**Robotics**
+<details>
+<summary><b>Current technical focus</b></summary>
 
-`ROS 2` `Gazebo` `RViz` `MoveIt`
+<br>
 
-**Engineering**
+`Robot Kinematics` · `Computer Vision` · `Control Systems` · `ROS 2` · `Robot Simulation` · `Embedded Robotics` · `Soft Robotics` · `Digital Twins`
 
-`Fusion 360` `Embedded Systems` `Robot Simulation`
-
-**Tools**
-
-`Linux` `Git` `GitHub` `Arduino` `ESP32`
+</details>
 
 ---
 
 ## What I'm Exploring
 
-<p align="center">
-  <img src="./assets/robotics-system-map.svg" alt="Intelligent robotic systems map" width="100%">
-</p>
+I don't think of these as separate technologies. I'm interested in how they form one robotic system:
 
-I'm especially interested in the space where
+```mermaid
+graph LR
+    A[Perception] --> B[State & World Model]
+    B --> C[Algorithms]
+    C --> D[Planning & Control]
+    D --> E[Simulation]
+    E --> F[Robot Hardware]
+    F --> A
 
-**mathematics → algorithms → simulation → hardware**
+    B --- G[Computer Vision]
+    C --- H[Kinematics & Dynamics]
+    D --- I[ROS 2]
+    E --- J[Digital Twins]
+    F --- K[Embedded Systems]
 
-meet each other.
+    style A fill:#eff6ff,stroke:#2563eb,stroke-width:2px,color:#111827
+    style B fill:#ecfdf5,stroke:#10b981,stroke-width:2px,color:#111827
+    style C fill:#ecfdf5,stroke:#10b981,stroke-width:2px,color:#111827
+    style D fill:#fff7ed,stroke:#f97316,stroke-width:2px,color:#111827
+    style E fill:#fff7ed,stroke:#f97316,stroke-width:2px,color:#111827
+    style F fill:#f5f3ff,stroke:#7c3aed,stroke-width:2px,color:#111827
+```
+
+The interesting part for me is the loop:
+
+**sense → understand → decide → simulate → act → learn**
+
+That's where mathematics, algorithms, software and physical robotics start meeting each other.
 
 ---
 
