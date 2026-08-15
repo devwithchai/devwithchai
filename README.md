@@ -115,34 +115,26 @@ I don't think of these as separate technologies. I'm interested in how they form
 
 ```mermaid
 graph TD
-    subgraph "Sense"
-        A[Perception]
-        A_CV[(Computer Vision)]
-        A_LIDAR[(LIDAR, IMU)]
-        A --> A_CV
-        A --> A_LIDAR
-    end
+    A[Perception]
+    A_CV[(Computer Vision)]
+    A_LIDAR[(LIDAR, IMU)]
+    A --> A_CV
+    A --> A_LIDAR
 
-    subgraph "Think"
-        B[State & World Model]
-        C[Algorithms]
-        D[Planning & Control]
-        B --> C
-        C --> D
-        C_KD[("Kinematics & Dynamics")] -.-> C
-        C_SLAM[("SLAM, Navigation")] -.-> C
-    end
+    B[State & World Model]
+    C[Algorithms]
+    D[Planning & Control]
+    B --> C
+    C --> D
+    C_KD[("Kinematics & Dynamics")] -.-> C
+    C_SLAM[("SLAM, Navigation")] -.-> C
 
-    subgraph "Act"
-        E[Simulation]
-        F[Robot Hardware]
-        E_DT[(Digital Twins)] -.-> E
-        F_ES[(Embedded Systems)] -.-> F
-    end
+    E[Simulation]
+    F[Robot Hardware]
+    E_DT[(Digital Twins)] -.-> E
+    F_ES[(Embedded Systems)] -.-> F
 
-    subgraph "Orchestration"
-        ROS2[("ROS 2")]
-    end
+    ROS2[("ROS 2")]
 
     A --> B
     D --> E
@@ -152,30 +144,24 @@ graph TD
     D -- "ROS 2 Msg" --> ROS2
     ROS2 -- "ROS 2 Msg" --> F
 
-    %% Main process nodes
-    style A fill:#264653,stroke:#2A9D8F,stroke-width:2px,color:#fff
-    style B fill:#264653,stroke:#2A9D8F,stroke-width:2px,color:#fff
-    style C fill:#264653,stroke:#2A9D8F,stroke-width:2px,color:#fff
-    style D fill:#264653,stroke:#2A9D8F,stroke-width:2px,color:#fff
-    style E fill:#264653,stroke:#E9C46A,stroke-width:2px,color:#fff
-    style F fill:#264653,stroke:#F4A261,stroke-width:2px,color:#fff
-    style ROS2 fill:#264653,stroke:#E76F51,stroke-width:2px,color:#fff
-
-    %% Sub-item nodes
-    style A_CV fill:#2A9D8F,color:#fff
-    style A_LIDAR fill:#2A9D8F,color:#fff
-    style C_KD fill:#2A9D8F,color:#fff
-    style C_SLAM fill:#2A9D8F,color:#fff
-    style E_DT fill:#E9C46A,color:#000
-    style F_ES fill:#F4A261,color:#000
-
     %% Clickable links
     click C_KD "https://github.com/devwithchai/OpenKinematics" "View OpenKinematics repository" _blank
     click C_SLAM "https://github.com/devwithchai/MobileRobotics" "View Mobile Robotics repository" _blank
     click F_ES "https://github.com/devwithchai/MobileRobotics" "View Mobile Robotics repository" _blank
     click ROS2 "https://docs.ros.org/en/rolling/" "Go to ROS 2 Documentation" _blank
 
-    classDef default fill:#264653,stroke:#ddd,color:#fff
+    %% --- Styling ---
+    %% Define classes for each logical group
+    classDef sense fill:#0077b6,stroke:#023e8a,color:#fff
+    classDef think fill:#06d6a0,stroke:#073b4c,color:#000
+    classDef act fill:#f9c74f,stroke:#f3722c,color:#000
+    classDef orchestrate fill:#ef476f,stroke:#b22c49,color:#fff
+
+    %% Assign nodes to classes
+    class A,A_CV,A_LIDAR sense
+    class B,C,D,C_KD,C_SLAM think
+    class E,F,E_DT,F_ES act
+    class ROS2 orchestrate
 ```
 
 The interesting part for me is the loop:
