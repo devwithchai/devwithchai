@@ -136,14 +136,11 @@ graph TD
 
     ROS2[("ROS 2")]
 
-    subgraph "Sense-Think-Act Loop"
-        A --> B --> C --> D
-        D --> E
-        D -- "Commands" --> ROS2
-        F -- "Sensor Data" --> ROS2
-        ROS2 --> B
-    end
-
+    A --> B --> C --> D
+    D --> E
+    D -- "Commands" --> ROS2
+    F -- "Sensor Data" --> ROS2
+    ROS2 --> B
     E -- "Sim-to-Real" --> F
 
     %% Clickable links
