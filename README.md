@@ -1,20 +1,20 @@
-# Chaitanya Belekar
+# Chaitanya Belekar <a href="https://komarev.com/ghpvc/?username=devwithchai" target="_blank"><img align="right" src="https://komarev.com/ghpvc/?username=devwithchai&label=PROFILE+TRAFFIC&style=flat-square&color=blue" /></a>
 
 <p align="center">
   <img src="./assets/hero.gif">
 </p>
 
 <p align="center">
-  <a href="https://github.com/devwithchai">
-    <img src="./assets/github-button.svg" alt="GitHub">
+  <a href="https://www.linkedin.com/in/chaitanya-belekar/">
+    <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn">
   </a>
   &nbsp;
-  <a href="https://www.linkedin.com/in/chaitanya-belekar/">
-    <img src="./assets/linkedin-button.svg" alt="LinkedIn">
+  <a href="https://github.com/devwithchai">
+    <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub">
   </a>
   &nbsp;
   <a href="https://mail.google.com/mail/?view=cm&fs=1&to=chaitanyabelekar18@gmail.com">
-    <img src="./assets/email-button.svg" alt="Email">
+    <img src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email">
   </a>
 </p>
 
@@ -130,19 +130,21 @@ graph TD
     C_SLAM[("SLAM, Navigation")] -.-> C
 
     E[Simulation]
-    F[Robot Hardware]
     E_DT[(Digital Twins)] -.-> E
+    F[Robot Hardware]
     F_ES[(Embedded Systems)] -.-> F
 
     ROS2[("ROS 2")]
 
-    A --> B
-    D --> E
-    E -- "Sim-to-Real" --> F
-    F -- "Feedback Loop" --> A
+    subgraph "Sense-Think-Act Loop"
+        A --> B --> C --> D
+        D --> E
+        D -- "Commands" --> ROS2
+        F -- "Sensor Data" --> ROS2
+        ROS2 --> B
+    end
 
-    D -- "ROS 2 Msg" --> ROS2
-    ROS2 -- "ROS 2 Msg" --> F
+    E -- "Sim-to-Real" --> F
 
     %% Clickable links
     click C_KD "https://github.com/devwithchai/OpenKinematics" "View OpenKinematics repository" _blank
